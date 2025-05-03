@@ -1,4 +1,4 @@
-# 🔍 Nginx Log Analyzer (Shell Script)
+# Nginx Log Analyzer (Shell Script)
 
 A simple bash script to analyze an Nginx access log file (`logs.txt`) and extract the following insights:
 
