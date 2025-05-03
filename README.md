@@ -1,49 +1,42 @@
-# Nginx-Log-Analyzer
-A simple shell script tool to analyze Nginx access logs from the command line. It parses a standard access log file and provides insights such as:  
-🔢 Top 5 IP addresses by request count  
-📄 Top 5 requested paths  
-✅ Top 5 response status codes  
-🧭 Top 5 user agents
+# 🔍 Nginx Log Analyzer (Shell Script)
 
-🛠 Requirements
-Unix/Linux system (or WSL on Windows)
+A simple bash script to analyze an Nginx access log file (`logs.txt`) and extract the following insights:
 
-Shell with awk, sort, uniq, head installed
+* Top 5 IP addresses by request count
+* Top 5 most requested paths
+* Top 5 HTTP response status codes
+* Top 5 user agents
 
-Nginx access log file (standard format)
+---
 
-🚀 How to Use
-1. Clone the Repository
-bash
+## 🛠 Requirements
 
-git clone https://github.com/your-username/nginx-log-analyzer.git
-cd nginx-log-analyzer
+* Bash shell
+* Tools: `awk`, `sort`, `uniq`, `head`
+* Nginx access log file in standard format (`logs.txt`)
 
-2. Place Your Log File
-Make sure your Nginx access log file is named logs.txt and placed in the same directory as the script.
+---
 
-Or edit the script and update LOG_FILE="your-log-file.txt
+## 🚀 How to Use
 
-3. Make the Script Executable
-bash
+1. **Clone the repository or copy the script**
+2. **Place your Nginx access log as `logs.txt` in the same directory**
+3. **Make the script executable**
 
-chmod +x analyze_logs.sh
-5. Run the Script
-bash
+   ```bash
+   chmod +x analyze_logs.sh
+   ```
+4. **Run the script**
 
-./analyze_logs.sh
+   ```bash
+   ./analyze_logs.sh
+   ```
 
-📌 What It Shows
-Top 5 IP addresses with the most requests
+---
 
-Top 5 most requested paths
+## 📦 Sample Output
 
-Top 5 HTTP status codes
-
-Top 5 user agents
-
-#ouput---
-
+```
 Top 5 IP addresses with the most requests:
     387 178.128.94.113
     387 142.93.136.176
@@ -72,15 +65,11 @@ Top 5 user agents:
      96 Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.140
      76 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 (StatusCake)
 
+---
 
-💡 Optional
+## 📌 Notes
 
-You can modify the script to:
+* You can change the `LOG_FILE` variable in the script to point to a different log file.
+* Ensure your log file follows the standard Nginx access log format.
 
-Show results for a specific time period
-
-Analyze error logs
-
-Export results to a file
-
-
+---
